@@ -20,4 +20,4 @@ EXPOSE 8080
 USER sbling
 WORKDIR /home/sbling
 
-CMD nginx
+CMD sudo nginx
