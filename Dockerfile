@@ -15,12 +15,9 @@ RUN echo 'sbling ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 COPY sbling-trip.nginx.conf /etc/nginx/nginx.conf
 
-COPY init.sh /home/sbling/init.sh 
-RUN chmod 111 /home/sbling/init.sh
 
 EXPOSE 8080
 USER sbling
 WORKDIR /home/sbling
 
-ENTRYPOINT ["sudo","bash", "./init.sh"]
-
+CMD nginx
