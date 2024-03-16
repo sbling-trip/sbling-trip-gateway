@@ -2,7 +2,8 @@ FROM nginx
 
 RUN apt-get update \
   && apt-get install -y -qq sudo \
-  && apt-get install -y -qq vim
+  && apt-get install -y -qq vim \
+  && apt-get install -y -qq certbot
 
 RUN adduser -u 10000 sbling
 RUN usermod -aG sudo sbling
